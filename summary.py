@@ -7,9 +7,8 @@ load_dotenv()
 
 # Gemini API 연결
 client = genai.Client(
-    api_key=os.getenv("gemini_api_key")
+    api_key=os.getenv("GEMINI_API_KEY")
 )
-
 
 def summarize_news(news_list):
     """
@@ -40,7 +39,7 @@ def summarize_news(news_list):
 """
 
     response = client.models.generate_content(
-        model="gemini-2.5-flash",
+        model="models/gemini-3.5-flash",
         contents=prompt
     )
 

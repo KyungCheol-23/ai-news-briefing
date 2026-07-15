@@ -1,8 +1,8 @@
 from news import get_news
-keyword = input("원하는 키워드를 입력해주세요!")
-print(f"입력한 키워드: {keyword}")
+from summary import summarize_news
 
-articles = get_news("인공지능", 3)
+news = get_news("AI", 2)
+print(news)
 
-for article in articles:
-    print(article["link"])
+summary = summarize_news(news)
+print(summary)
