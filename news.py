@@ -26,7 +26,7 @@ def get_news(keyword, max_result = 10): # 기사 검색기
     for item in feed.entries[:max_result]:
         news.append({
             "title": item.title,
-            "summary": item.summary,    #나중에 요약 부분은 삭제
+            "description": item.description,    #나중에 요약 부분은 삭제
             "link": item.link
         })
     
